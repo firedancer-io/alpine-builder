@@ -1,0 +1,6 @@
+name: 'Firedancer Alpine Builder'
+description: 'Provides a build environment for Firedancer on Alpine'
+outputs:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
