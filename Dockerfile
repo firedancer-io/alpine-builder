@@ -1,4 +1,6 @@
 FROM alpine:3
 
-COPY setup.sh setup.sh
-RUN setup.sh
+COPY scripts scripts/
+RUN ./scripts/setup.sh
+
+ENTRYPOINT ["/scripts/entrypoint.sh"]
