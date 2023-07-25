@@ -1,5 +1,11 @@
 name: 'Firedancer Alpine Builder'
 description: 'Provides a build environment for Firedancer on Alpine'
+inputs:
+  command:
+    description: command to execute
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
